@@ -19,7 +19,7 @@ from myauth import views as myauth_views
 
 urlpatterns = [
     
-    url(r'^$', myauth_views.home, name='home'),
+    
     url(r'^admin/', admin.site.urls),
-    url(r'^myauth/',include('myauth.urls')),
+    url(r'',include('myauth.urls')),
 ]

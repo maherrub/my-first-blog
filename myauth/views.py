@@ -17,7 +17,7 @@ def login(request):
                 return render(request.GET.get('next', settings.LOGIN_REDIRECT_URL))
         
     context = {'form': form}
-    return render(request, "home.html", context)
+    return render(request, "myauth/home.html", context)
 
 
 def register(request):
@@ -30,4 +30,4 @@ def logout(erquest):
     return #something
 
 def home(request):
-    return render(request, "home.html")
+    return render(request, 'myauth/home.html', {})
