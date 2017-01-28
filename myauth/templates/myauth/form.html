@@ -1,5 +1,3 @@
-
-
 {% block content %}
 
 <h2>Title Test</h2>
@@ -10,7 +8,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h3>login</h3>
-                    <from method='POST' action='' >
+                     <form name="form" method="post" action="">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <input class='btn btn-default' type='submit'/>
