@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container-fluid"
+<div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+  
+                    <h2>This is homepage</h2>
+                    {% if user.is_authenticated %}
+                        Welcome user, you are loged in..
+                    {% else %}
+                        You are not logged in
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'form.html' %}
+
+{% endblock %}
