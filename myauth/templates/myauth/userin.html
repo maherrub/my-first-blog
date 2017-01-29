@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
-{% block body %}
+{% block content %}
 
 <div class="container-fluid"
     <div class="container">
         <div class="jumbotron">
   
-                   <h2>logged in homepage</h2>
+                   <h2>Homepage (secure)</h2>
                     {% if user.is_authenticated %}
                         Welcome {{ user.username }}, you are loged in..
                     {% else %}
                         You are not logged in author {{ author.username }}
                     {% endif %}
+                    <a href="\">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp; Logout</a>
                     
         </div>
     </div>

@@ -1,17 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 
-<h2>Title Test</h2>
+<h2>Login Form</h2>
 
 <div class="container-fluid"
 <div class="row">
         <div class="col-sm-12 col-md-6">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h3>login</h3>
-                     <form name="form" method="post" action="">
+                    <form name="form" method="post" action="">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        <input class='btn btn-default' type='submit'/>
+                        {{ form|crispy }}
+                        <input class='btn btn-primary btn-block' type='submit'/>
                     </form>
                 </div>
             </div>
